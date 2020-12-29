@@ -7,7 +7,9 @@ As a result of several bachelor and master theses that I supervised, we have dev
 
 Moreover, the AFCL Environment architecture includes FaaSifiers, FCfiers and a automatic deployer.
 
-The following paragraphs present the available and recently started topics for master theses directly connected with the AFCL Environment. It also presents the active and closed master theses.
+The following paragraphs present the available and recently started topics for master theses directly connected with the AFCL Environment. It also presents the active and closed master theses. 
+
+You can find a latex template for the master thesis which includes some hints [here](./blob/main/template).
 
 
 # Available master theses
