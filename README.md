@@ -11,16 +11,27 @@ The following paragraphs present the available and recently started topics for m
 
 You can find a latex template for the master thesis which includes some hints [here](https://github.com/sashkoristov/master-theses/tree/main/template).
 
+Milestones for a successful master thesis:
+- Requirements analysis
+- Review the related work
+- System architecture
+- Development
+- Evaluation
+- Finalizing the master thesis
+- Defensio
+- `Farewell party` :blush:
+
+
 
 # Available master theses
 
-* Tentative requirements analyses: January-February 2021
-* Tentative start: February - April 2021
+* Tentative requirements analyses: March-April 2021
+* Tentative start: April - May 2021
 * Tentative finish: October 2021 - April 2022
 
-The following three topics for master theses are available for the given period above.
+The following topics for master theses are available for the given period above.
 
-## 1. *fTemplate*
+## *fTemplate*
 
 | Title | ***fTemplate*: Agile development of serverless functions with portable function templates (*FTs*)** |
 | ----- | ----- | 
@@ -32,7 +43,7 @@ The following three topics for master theses are available for the given period 
 ---
 
 
-## 2. *DxAFCL*
+## *DxAFCL*
 
 | Title | ***DxAFCL*: Decentralized xAFCL ** |
 | ----- | ----- | 
@@ -45,10 +56,17 @@ The following three topics for master theses are available for the given period 
 
 
 
-## 3. *AFCL-Sched*
+
+
+# Recently started master theses for the AFCL Environment (SS2021)
+
+
+## *AFCL-Sched*
 
 | Title | ***AFCL-Sched*: Optimal execution of FCs across multiple FaaS systems** |
 | ----- | ----- | 
+| Student | Christian Hollaus | 
+| Status | Requirements analysis | 
 | Description | The aim of this master thesis is to conduct a series of experiments to evaluate the properties and constraints of widely-known FaaS systems (e.g. AWS Lambda, IBM Cloud Functions, Google Cloud Functions, Alibaba Function Compute, etc.). Numerous function implementations of serverless applications represented as functions choreographies (*FCs*) will be tested for various configurations (concurrency, assigned memory, latency, region, programming language, etc). The times for the functions and *FCs* are measured and then evaluated, which include: time until a function request is submitted and function is started, time for the execution of the function and the whole FC (with measurement of memory and CPU consumption), time to receive the response from the FaaS system, and much more. A large number of experiments are started. The measured data will be stored and then statistically evaluated and visualized. A special feature is the consideration of highly scalable FCs, which run e.g. tens of thousands functions. The evaluation may be triggered on-demand or after developing or deploying a function implementation. The aim of this work is a better understanding of serverless computing for different FCs and FaaS systems. The trade-off between performance and costs will be examined more closely. The applications are built with the existing AFCL language developed by the DPS group and run with the existing enactment engine. Based on the findings, a novel FaaS model will be developed. Finally, a multi-objective scheduler will be developed for optimal execution of FCs across multiple FaaS systems. The initial xAFCL FaaS model for parallel loops that we developed can be shared on demand. The student will be cordially invited as a co-author in a scientific paper based on this research work. 
 |Tentative tasks| 1. Design a common data model for measurement data from various FaaS systems<br> 2. Develop scripts for parsing logs from FaaS systems and storing measurement data.<br> 3. Execution of experiments on multiple widely-known FaaS systems.<br> 4. Evaluation and visualization of the measured data.<br> 5. Develop a multi-objective scheduler for FC execution<br> 6. Automatic conversion of AFCL into intermediary representation (CFCL).|
 | Theoretical skills | 2020W703832 VU Distributed Applications in the Edge-Cloud Continuum, Cloud Computing, Serverless. | 
@@ -56,8 +74,6 @@ The following three topics for master theses are available for the given period 
 |References| 1. (jFaaS)[https://github.com/sashkoristov/jFaaS].<br> 2. (`Automatic function deployment`) R. Cordingly, H. Yu, V. Hoang, Z. Sadeghi, D. Foster, D. Perez, R. Hatchett, and W. Lloyd. "The Serverless Application Analytics Framework: Enabling Design Trade-off Evaluation for Serverless Software." In 2020 21st ACM/IFIP International Middleware Conference: 6th International Workshop on Serverless Computing (WoSC'20). 2020, [SAAF](https://github.com/wlloyduw/SAAF).<br> 3. (`Automatic function deployment`) [Terraform](https://www.terraform.io/).<br> 4. (`Node2FaaS Framework`) [Node2FaaS *FCifier*](https://github.com/node2faas/framework).<br> 5. Abstract Function Choreography Language ([AFCL paper](https://doi.org/10.1016/j.future.2020.08.012))], [AFCL git](https://github.com/sashkoristov/AFCL).<br> 6. Enactment engine to run serverless workflows [xAFCL](https://github.com/sashkoristov/enactmentengine). | |
 ---
 
-
-# Recently started master theses for the AFCL Environment (SS2021)
 
 ## 1.  *xFlow* (read CrossFlow)
 
@@ -75,9 +91,9 @@ The following three topics for master theses are available for the given period 
 
 # Active master theses
 
-1. "AFCL Environment – Development and Scalable Execution of Portable Function Choreographies Across Multiple Serverless Cloud Platforms", Stefan Pedratscher. Status - Advanced development.
+1. "AFCL Environment – Development and Scalable Execution of Portable Function Choreographies Across Multiple Serverless Cloud Platforms", Stefan Pedratscher. Status - Finalizing the master thesis.
 
-Details for active master theses can be found [here](./blob/main/active/readme.md).
+Details for active master theses can be found [here](./active/readme.md).
 
 
 # Closed master theses
@@ -86,7 +102,7 @@ Details for active master theses can be found [here](./blob/main/active/readme.m
 1. "Distributed GPGPU on Cloud GPU Clusters", Martin Schuchardt, SS2019
 
 
-Details for closed master theses can be found [here](./blob/main/closed/readme.md).
+Details for closed master theses can be found [here](./closed/readme.md).
 
 
 
@@ -94,6 +110,6 @@ Details for closed master theses can be found [here](./blob/main/closed/readme.m
 
 # Contact
 
-If you need any additional information, please do not hesitate to contact me on sashko@dps.uibk.ac.at. 
+If you need any additional information, please do not hesitate to contact me on sashko.ristov@uibk.ac.at. 
 
 My topics for bachelor theses may be found [here](https://github.com/sashkoristov/bachelor-theses).
