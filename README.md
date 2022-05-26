@@ -83,7 +83,7 @@ The following topics for master theses are available for the summer semester 202
 | Title | ***AFCL-Sched*: Optimal execution of FCs across multiple FaaS systems** |
 | - | - | 
 | Student | Christian Hollaus | 
-| Status | Evaluation | 
+| Status | Defensio | 
 | Description | The aim of this master thesis is to conduct a series of experiments to evaluate the properties and constraints of widely-known FaaS systems (e.g. AWS Lambda, IBM Cloud Functions, Google Cloud Functions, Alibaba Function Compute, etc.). Based on the findings, a multi-objective scheduler will be developed for optimal execution of FCs across multiple FaaS systems.| |
 ---
 
@@ -93,7 +93,7 @@ The following topics for master theses are available for the summer semester 202
 | Title | ***CrossFlow*: Cross-layered resource management in Cloud continuum** |
 | - | - | 
 | Student | Ahmet Aspir | 
-| Status | Development | 
+| Status | Finalizing the master thesis | 
 | Description | This thesis will research methods to develop CrossFlow, a federated platform to maange various types of resources in the cloud continuum.| |
 ---
 
