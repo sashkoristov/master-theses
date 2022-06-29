@@ -78,16 +78,6 @@ The following topics for master theses are available for the summer semester 202
 # Active master theses (SS2021)
 
 
-## *AFCL-Sched*
-
-| Title | ***AFCL-Sched*: Optimal execution of FCs across multiple FaaS systems** |
-| - | - | 
-| Student | Christian Hollaus | 
-| Status | Defensio | 
-| Description | The aim of this master thesis is to conduct a series of experiments to evaluate the properties and constraints of widely-known FaaS systems (e.g. AWS Lambda, IBM Cloud Functions, Google Cloud Functions, Alibaba Function Compute, etc.). Based on the findings, a multi-objective scheduler will be developed for optimal execution of FCs across multiple FaaS systems.| |
----
-
-
 ##  *CrossFlow*
 
 | Title | ***CrossFlow*: Cross-layered resource management in Cloud continuum** |
@@ -100,6 +90,7 @@ The following topics for master theses are available for the summer semester 202
 
 # Closed master theses
 
+1. "*AFCL-Sched*: Optimal execution of FCs across multiple FaaS systems", Christian Hollaus, SS2022 [details](./closed/AFCL-Sched.md).
 1. "AFCL Environment - Development and Scalable Execution of Portable Function Choreographies Across Multiple Serverless Cloud Platforms", Stefan Pedratscher, SS2021 [details](./closed/AFCLEnvironment.md).
 1. "VolatileSim: A simulation framework for cloud volatile resources", Christoph Schöpf, SS2020, `Among top four master theses for 2020` at the institute.
 1. "Distributed GPGPU on Cloud GPU Clusters", Martin Schuchardt, SS2019.
