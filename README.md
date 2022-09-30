@@ -1,17 +1,91 @@
 # Master theses topics (Supervisor: `Sashko Ristov`)
 A repository for available, active and closed topics for master theses supervised by Sashko Ristov.
 
-As a result of several bachelor and master theses that I supervised, we have developed a prototype of the *xAFCL* enactment engine, which is able to run serverless workflows or function choreographies (*FCs*) across many widely-known cloud providers. *xAFCL EE* integrates the component [FTjFaaS](https://github.com/sashkoristov/FTjFaaS) for optional fault tolerant execution of FC functions (currently supported AWS Lambda and IBM Cloud Functions) and [jFaaS](https://github.com/sashkoristov/jFaaS/) for portable execution across many FaaS systems (AWS Lambda, IBM Cloud Functions, Google Cloud Functions, Alibaba Function Compute, Microsoft Azure Cloud Functions, etc).
+Master theses topics are closely related with my current research areas:
 
-*xAFCL EE* is the core part of the [AFCL Environment](https://github.com/sashkoristov/AFCLEnvironment), a platform to develop, deploy, and fault tolerant execution of FCs developed in our Abstract Function Choreography Language ([AFCL](https://doi.org/10.1016/j.future.2020.08.012)).
+- serverless computing and federated FaaS
+- modeling and simulation 
+- interoperability, portability, and federation
+- scheduling
+- digital twins
+- BIM
 
-Moreover, the AFCL Environment architecture includes FaaSifiers, FCfiers, agile development, and automatic deployment.
+# Research tracks
+
+
+## Modeling and simulation
+
+Federated FaaS (AWS, Google, Microsoft, Alibaba, IBM) is a challenging heterogeneous environment. My goal is to create a mathematical model that estimates performance of serverless functions with minimum effort.
+
+With our recent paper SimLess, the first step was moved by modeling the round trip time of a function to each FaaS provider (from university of Innsbruck).
+
+Work in progress models:
+- deployment time of functions
+- storage access time
+- Backend-as-a-Service (BaaS) (Object recognition, Speecht2Text, Text2Speech)
+
+
+New models that are to be researched
+- cold/warm start
+- Backend-as-a-Service (e.g., NLP, Prediction, ...)
+- performance variability
+
+
+## Interoperability, portability, and federation
+
+This track researches libraries to abstract BaaS services that are used by functions. The libraries offer developers to develop functions with abstract BaaS services, while the specific provider and region is selected during runtime.
+
+Already developed such libraries are:
+- fRecognition (Java)
+- fStorage (Java, Python, Go)
+
+Work in progress
+- Speech2Text, Text2Speech
+
+
+## xAFCL Serverless Workflow Management System
+
+As a result of several bachelor and master theses that I supervised, we have developed a prototype of the *xAFCL* serverless workflow management system , which is able to run serverless workflows or function choreographies (*FCs*) across many widely-known cloud providers. FCs are developed in our Abstract Function Choreography Language ([AFCL](https://doi.org/10.1016/j.future.2020.08.012)).
+
+*xAFCL EE* integrates the component [FTjFaaS](https://github.com/sashkoristov/FTjFaaS) for optional fault tolerant execution of FC functions (currently supported AWS Lambda and IBM Cloud Functions) and [jFaaS](https://github.com/sashkoristov/jFaaS/) for portable execution across many FaaS systems (AWS Lambda, IBM Cloud Functions, Google Cloud Functions, Alibaba Function Compute, Microsoft Azure Cloud Functions, etc).
+
+
+## Scheduling
+
+This broad research topic receives as input the first two topics, provides an optimal FC, and then runs it on xAFCL.
+
+Published schedulers:
+
+- xAFCL
+- rAFCL
+- FaaSt
+
+
+Work in progress:
+- data-aware pyStorage
+- data-aware matchmaking
+- DeployLess
+- SpeechLess
+- MO in Federated FaaS
+
+## BIM & Digital Twins
+
+Will be provided details very soon.
+
+TOPICS:
+- FeDT: Federated Digital Twins in Federated Clouds 
+
+
+
+# Other Information
 
 The following paragraphs present the available and recently started topics for master theses directly connected with the AFCL Environment. It also presents the active and closed master theses. 
 
 You can find a latex template for the master thesis which includes some hints [here](https://github.com/sashkoristov/master-theses/tree/main/template).
 
-Milestones for a successful master thesis:
+
+# Milestones for a successful master thesis
+
 - Requirements analysis
 - Review the related work
 - System architecture
@@ -23,22 +97,36 @@ Milestones for a successful master thesis:
 
 # Available master theses
 
-* Tentative requirements analyses February-March 2022
-* Tentative start March-April 2022
-* Tentative finish October-December 2022
+* Tentative requirements analyses October-December 2022
+* Tentative start November 2022 - January 2023
+* Tentative finish June - September 2023
 
-The following topics for master theses are available for the summer semester 2022:
+The following topics for master theses are available for the winter semester 2022:
 
 
-## *CardioHPC*
+## *xAFCL2*
 
-| Title | ***CardioHPC*: Serverless real-time heart monitoring centre** |
-| ----- | ----- | 
-| Description | The goal of this master thesis is to develop real-time monitoring centre of patients' sensor data.  Simulation of real-time monitoring centre includes experiment setup, simulation, and evaluation phases. CardioHPC should support both real-time stream of small messages (during wi-fi connection) or batch processing of offline files (e.g., when the mobile device connects to wi-fi after considerable time being offline). For this purpose, the messages should be calssified as small/big and high/low priority and handled accordingly. For the big and low priority, a set of actions should be performed in a form of an AFCL serverless workflow or function choreography (*FC*) after upload of patients' data. For the real-time stram, CardioHPC may use Kafka, where small messages and references to big messages will be placed. Afterwards, a set of serverless functions will handle patients'data, including noise intervals identification and elimination, heartbeat detection, detection of fibrillation, identification of segments and elevation, heart rate variability, statistical analysis, alerting, and reporting. A generator of a virtual patient ECG will be developed to simulate generated files. The evaluation metrics will include measuring of response times for different test cases varying the workload (e.g., from 1K to 20K virtual patients ECG data simultaneously and their length). The experiment will be executed with the existing *xAFCL* enactment engine ([xAFCL EE](https://github.com/sashkoristov/enactmentengine)). The target is to measure various performance indicatiors, such as response time, speedup, and throughput versus the number of cloud regions.
-|Tasks| 1. Develop serverless functions. <br> 2. Develop AFCL FC that distributed the work.<br> 3. Develop the event-based pipeline.<br> 4. Evaluate *CardioAFCL* with various workload (weak and strong scaling).|
-| Theoretical skills | Cloud Computing, Serverless, file management, ECG data management (existing libraries). | 
-| Practical skills | FaaS, Cloud API, data streams.|
----
+Decentralized Serverless Workflow Management System
+
+
+## *xAFCLSim3*
+
+SLO-based Simulation Framework for AFCL Serverless Workflows  
+
+
+## *WarmFaaS*
+
+Model the Cold Start Effect and Warm Serverless Functions
+
+
+## *BIMLess*
+
+Serverless-based IoT-Edge-Fog-Cloud Middleware for Construction Automation
+
+
+## *FeDT*
+
+Federated Digital Twins in Federated Clouds 
 
 
 ## *fOps*
@@ -78,12 +166,32 @@ The following topics for master theses are available for the summer semester 202
 # Active master theses (SS2021)
 
 
+##  *SpeechLess*
+
+| Title | ***SpeechLess*: Engineering Serverless Java Applications with abstract Speech2Text and Text2Speech Services in Federated FaaS** (Tentative) |
+| - | - | 
+| Student | Thomas Larcher | 
+| Status | Requirement analysis | 
+| Description | | |
+---
+
+
+##  *StoreLess*
+
+| Title | ***StoreLess*: Data-aware scheduler in Federated FaaS** |
+| - | - | 
+| Student | Mika Hautz | 
+| Status | System architecture | 
+| Description | | |
+---
+
+
 ##  *CrossFlow*
 
 | Title | ***CrossFlow*: Cross-layered resource management in Cloud continuum** |
 | - | - | 
 | Student | Ahmet Aspir | 
-| Status | Finalizing the master thesis | 
+| Status | Defensio | 
 | Description | This thesis will research methods to develop CrossFlow, a federated platform to maange various types of resources in the cloud continuum.| |
 ---
 
