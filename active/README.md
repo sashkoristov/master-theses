@@ -1,6 +1,7 @@
-# Active bachelor theses
+# Active master theses
 
 
-##  Started in SS2021
+##  Started in WS2022
 
-1. ***CrossFlow*: Cross-layered resource management in Cloud continuum**, Ahmet Aspir. [details](./CrossFlow.md).
+1. ***CORE*: Code Once, Run Everywhere. Engineering Serverless Workflow Applications with High-Level of Abstraction**, Thomas Larcher. [details](./CORE.md).
+1. ***AccessLess*: Data-aware scheduler in Federated FaaS**, Mika Hautz. [details](./AccessLess.md).

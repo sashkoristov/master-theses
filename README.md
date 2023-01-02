@@ -163,41 +163,33 @@ Federated Digital Twins in Federated Clouds
 
 
 
-# Active master theses (SS2021)
+# Active master theses (WS2022)
 
 
-##  *SpeechLess*
+##  *CORE*
 
-| Title | ***SpeechLess*: Engineering Serverless Java Applications with abstract Speech2Text and Text2Speech Services in Federated FaaS** (Tentative) |
+| Title | ***CORE*: Code Once, Run Everywhere. Engineering Serverless Workflow Applications with High-Level of Abstraction** |
 | - | - | 
 | Student | Thomas Larcher | 
-| Status | Requirement analysis | 
-| Description | | |
+| Status | System architecture | 
+| Description | All cloud providers offer SDKs to easily code applications with their services. While on the one hand, these SDKs simplify developers' effort, they lock users to use other cloud services from the same cloud provider. Such codes (e.g., serverless functions), are neither *portable* (to migrate them on another cloud provider), nor *interoperable* (switch cloud service from another cloud provider). This vendor lock-in prevents users to switch the same service from other providers or to mix services from arbitrary providers. For instance, one cloud provider may reduce storage price, while another cloud provider may introduce more accurate OCR service for preferred language. To bridge this gap, this master thesis introduces CORE (Core Once Run Everywhere), an abstraction library that allows developers to code portable functions that can use interoperable cloud services within serverless workflows (text2speech and OCR). Moreover, heuristics will be researched to select the appropriate service based on user objectives.||
 ---
 
 
-##  *StoreLess*
+##  *AccessLess*
 
-| Title | ***StoreLess*: Data-aware scheduler in Federated FaaS** |
+| Title | ***AccessLess*: Data-aware scheduler in Federated FaaS** |
 | - | - | 
 | Student | Mika Hautz | 
 | Status | System architecture | 
-| Description | | |
+| Description | The aim of this master thesis is create a data-aware scheduler that aims to minimize the overall makespan of a serverless workflow in federated FaaS. *AccessLess* analyzes ephemeral data transfers between functions of the workflow and considers network locality. Unlike the related work, which schedules functions only, *AccessLess* schedules where ephemeral data should be stored in federated FaaS.||
 ---
 
-
-##  *CrossFlow*
-
-| Title | ***CrossFlow*: Cross-layered resource management in Cloud continuum** |
-| - | - | 
-| Student | Ahmet Aspir | 
-| Status | Defensio | 
-| Description | This thesis will research methods to develop CrossFlow, a federated platform to maange various types of resources in the cloud continuum.| |
----
 
 
 # Closed master theses
 
+1. "*CrossFlow*: Cross-layered resource management in Cloud continuum", Ahmet Aspir, WS2022 [details](./closed/CrossFlow.md)
 1. "*AFCL-Sched*: Optimal execution of FCs across multiple FaaS systems", Christian Hollaus, SS2022 [details](./closed/AFCL-Sched.md).
 1. "AFCL Environment - Development and Scalable Execution of Portable Function Choreographies Across Multiple Serverless Cloud Platforms", Stefan Pedratscher, SS2021 [details](./closed/AFCLEnvironment.md).
 1. "VolatileSim: A simulation framework for cloud volatile resources", Christoph Schöpf, SS2020, `Among top four master theses for 2020` at the institute.
