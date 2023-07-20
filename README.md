@@ -1,4 +1,7 @@
 # Master theses topics (Supervisor: `Sashko Ristov`)
+
+`New topics for winter semester 2023/2024.`
+
 A repository for available, active and closed topics for master theses supervised by Sashko Ristov.
 
 Master theses topics are closely related with my current research areas:
@@ -15,6 +18,7 @@ Master theses topics are closely related with my current research areas:
 
 # Research tracks
 
+The following paragraphs show the current research topics that I work on. Other topics from the two main areas (cloud computing and energy efficiency) are also possible. Please prepare a teaser (ca. 1 page) regarding the recommended topic.
 
 ## Modeling and simulation
 
@@ -22,16 +26,17 @@ Federated FaaS (AWS, Google, Microsoft, Alibaba, IBM) is a challenging heterogen
 
 With our recent paper SimLess, the first step was moved by modeling the round trip time of a function to each FaaS provider (from university of Innsbruck).
 
-Work in progress models:
-- deployment time of functions
+Work in progress models (can be extended to define a master thesis):
+- deployment time of functions, cloud provider, network proximity to cloud regions
 - storage access time
 - Backend-as-a-Service (BaaS) (Object recognition, Speecht2Text, Text2Speech)
 
 
-New models that are to be researched
-- cold/warm start
-- Backend-as-a-Service (e.g., NLP, Prediction, ...)
-- performance variability
+New models that are to be researched (can be defined as a master thesis)
+- cold/warm start, caching vs. cold start vs. scalability
+- deployment package size of the function, build time, layers, by reference / zipped, etc
+- Backend-as-a-Service (e.g., NLP, Prediction, ...) - runtime, cost, concurrency, throughput, accuracy, etc.
+- Predict FaaS performance variability and schedule the functions in federated FaaS
 
 
 ## Interoperability, portability, and federation
@@ -44,11 +49,16 @@ Already developed such libraries are:
 - Speech2Text, Text2Speech (Java, Go)
 - OCR, Translate (Java)
 
-Both for AWS and GCP.
+Work-in-progress:
+- fRecognition (Python)
+- fStorage (Node.js)
+- Speech2Text, Text2Speech (Python)
+
+Both for AWS and GCP. 
 
 ## xAFCL Serverless Workflow Management System
 
-As a result of several bachelor and master theses that I supervised, we have developed a prototype of the *xAFCL* serverless workflow management system , which is able to run serverless workflows or function choreographies (*FCs*) across many widely-known cloud providers. FCs are developed in our Abstract Function Choreography Language ([AFCL](https://doi.org/10.1016/j.future.2020.08.012)).
+As a result of several bachelor and master theses that I supervised, we have developed the *xAFCL* serverless workflow management system, which is able to run and simulate serverless workflows or function choreographies (*FCs*) across many widely-known cloud providers. FCs are developed in our Abstract Function Choreography Language ([AFCL](https://doi.org/10.1016/j.future.2020.08.012)). Several *scentific* (Montage, 1000Genome, BWA, Monte Carlo Pi approximation) and *business* FCs (celebrityDetection) are already publicly available ([AFCL Workflows](https://github.com/AFCLWorkflows/)).
 
 *xAFCL EE* integrates the component [FTjFaaS](https://github.com/sashkoristov/FTjFaaS) for optional fault tolerant execution of FC functions (currently supported AWS Lambda and IBM Cloud Functions) and [jFaaS](https://github.com/sashkoristov/jFaaS/) for portable execution across many FaaS systems (AWS Lambda, IBM Cloud Functions, Google Cloud Functions, Alibaba Function Compute, Microsoft Azure Cloud Functions, etc).
 
@@ -63,11 +73,15 @@ As a result of several bachelor and master theses that I supervised, we have dev
 
 
 ### Work in progress:
-- data-aware pyStorage
+- data-aware pyStorage (schedule both ephemeral data and serverless functions)
+- DeployLess (deployment time vs. scalability)
+- BaaSLess (schedule both BaaS services and serverless functions - using the fService libraries)
+- MO in Federated FaaS (optimize cost, performance)
+
+### Future work
 - data-aware matchmaking
-- DeployLess
-- SpeechLess
-- MO in Federated FaaS
+- MO in Federated FaaS (optimize other metrics BaaS accuracy, resilience, trustworthiness, etc)
+
 
 ## Energy efficiency, Digital Twins, BIM
 
@@ -86,11 +100,13 @@ You can find a latex template for the master thesis which includes some hints [h
 
 # Available master theses
 
-* Tentative requirements analyses August-September 2023
-* Tentative start September 2023 - January 2024
-* Tentative finish June - September 2024
+Tentative timeline for the available topics:
 
-The following topics for master theses are available for the winter semester 2023:
+* Requirements analyses August-September 2023
+* Start September 2023 - January 2024
+* Finish June - September 2024
+
+The following topics for master theses are available to start in the winter semester 2023:
 
 ## *FissionLess*
 
@@ -113,19 +129,6 @@ The following topics for master theses are available for the winter semester 202
 | Practical skills | Programming languages, Cloud APIs, git.|
 | Related work | 1. (`Automatic function packaging and deployment`) R. Cordingly, H. Yu, V. Hoang, Z. Sadeghi, D. Foster, D. Perez, R. Hatchett, and W. Lloyd. "The Serverless Application Analytics Framework: Enabling Design Trade-off Evaluation for Serverless Software." In 2020 21st ACM/IFIP International Middleware Conference: 6th International Workshop on Serverless Computing (WoSC'20). 2020, [SAAF](https://github.com/wlloyduw/SAAF). This tools can be used for wrappers and deployment scripts for various programming languages and FaaS providers. <br> 2. (`Node.js FaaSifier`) S. Ristov, S. Pedratscher, J. Wallnöfer, and T. Fahringer, “DAF: Dependency-Aware FaaSifier for Node.js Monolithic Applications,” in IEEE Software, doi: 10.1109/MS.2020.3018334, [DAF](https://github.com/qngapparat/daf).<br> 3. (`Automatic function deployment`) [Terraform](https://www.terraform.io/).<br> 4. (`Automatic function deployment`) [Serverless](https://www.serverless.com/).<br>  5. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as GoDeploy and TestOps for automatic deployment and benchmarking.|
 ---
-
-## *xAFCL2* (xAFCLStream)
-
-| Title | ***xAFCL2*: A microservices-based serverless workflow management system in Federated FaaS** |
-| ----- | ----- | 
-| Description |  I plan to migrate the existing xAFCL serverless workflow management system on a new platform based on microservices, including <br> - *workflow parser(s)* microservice(s), (AFCL or Step Functions.) <br> - *static scheduler(s)* service(s) (e.g., random, FaaSt, etc.); <br> - *invoker service* to run functions across multiple providers; <br> - *deployer service* to deploy functions across multiple providers; <br> - *resilience service* (e.g., for fault tolerance); <br> - *monitoring service* (status of each function), <br> - *dynamic scheduler* before execution, still check the status of cloud regions, etc. <br> The system should support both synchronous and asynchronous serverless workflows, as well as multiple serverless workflows simulatenaously.   
-|Tasks| 1. Develop the core microservices (parser, invoker, monitor, resilience). <br> 2. Develop at least one scheduler microservice. <br> 3. Integrate automatic deployer for various FaaS providers (e.g. TerraForm, Serverless Framework, GoDeploy, TestOps).<br> 4. Evaluate latencies of the system. 5. Evaluate the system with state-of-the-art.|
-| Theoretical skills | Cloud Computing, Serverless. | 
-| Practical skills | Programming languages, Cloud APIs.|
-| Related work | 1. Ideally the student attended the course "Serverless Cloud Automation Application" SS23. <br> 2. Books regarding microservice patterns.<br> 3. *xAFCL* enactment engine with integrated simulator SimLess [*xAFCL EE*](https://doi.org/10.1109/TSC.2021.3128137).<br> 4. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as GoDeploy and TestOps for automatic deployment and benchmarking.|
----
-
-
 
 ## *AFCL2`ABOL`*
 
@@ -201,6 +204,19 @@ Model and optimize specific aspects of Serverless Workflows (More details will f
 
 # Active master theses
 
+## *xAFCL2* (xAFCLStream)
+
+| Title | ***xAFCL2*: A microservices-based serverless workflow management system in Federated FaaS** |
+| ----- | ----- | 
+| Student | Thomas Oberroither | 
+| Status | Requirement analysis | 
+| Description |  The existing xAFCL serverless workflow management system will be migrated on a new platform based on microservices, including <br> - *workflow parser(s)* microservice(s), (AFCL or Step Functions.) <br> - *static scheduler(s)* service(s) (e.g., random, FaaSt, etc.); <br> - *invoker service* to run functions across multiple providers; <br> - *deployer service* to deploy functions across multiple providers; <br> - *resilience service* (e.g., for fault tolerance); <br> - *monitoring service* (status of each function), <br> - *dynamic scheduler* before execution, still check the status of cloud regions, etc. <br> The system should support both synchronous and asynchronous serverless workflows, as well as multiple serverless workflows simulatenaously.   
+|Tasks| 1. Develop the core microservices (parser, invoker, monitor, resilience). <br> 2. Develop at least one scheduler microservice. <br> 3. Integrate automatic deployer for various FaaS providers (e.g. TerraForm, Serverless Framework, GoDeploy, TestOps).<br> 4. Evaluate latencies of the system. <br> 5. Evaluate the system with state-of-the-art.|
+| Theoretical skills | Cloud Computing, Serverless. | 
+| Practical skills | Programming languages, Cloud APIs.|
+| Related work | 1. Ideally the student attended the course "Serverless Cloud Automation Application" SS23. <br> 2. Books regarding microservice patterns.<br> 3. *xAFCL* enactment engine with integrated simulator SimLess [*xAFCL EE*](https://doi.org/10.1109/TSC.2021.3128137).<br> 4. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as GoDeploy and TestOps for automatic deployment and benchmarking.|
+---
+
 
 ##  *MLProfileLess*
 
@@ -235,7 +251,7 @@ Model and optimize specific aspects of Serverless Workflows (More details will f
 | Title | ***AccessLess*: Data-aware scheduler in federated FaaS** |
 | - | - | 
 | Student | Mika Hautz | 
-| Status | Development | 
+| Status | Evaluation | 
 | Description | The aim of this master thesis is create a data-aware scheduler that aims to minimize the overall makespan of an AFCL serverless workflow in federated FaaS. *AccessLess* analyzes ephemeral data transfers between functions of the AFCL workflow and considers network locality. Unlike the related work, which schedules functions only, *AccessLess* schedules where ephemeral data should be stored in federated FaaS.||
 ---
 
