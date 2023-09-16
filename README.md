@@ -102,33 +102,28 @@ You can find a latex template for the master thesis which includes some hints [h
 
 Tentative timeline for the available topics:
 
-* Requirements analyses August-September 2023
-* Start September 2023 - January 2024
-* Finish June - September 2024
+* Requirements analyses October-November 2023
+* Start October 2023 - January 2024
+* Finish April - September 2024
 
-The following topics for master theses are available to start in the winter semester 2023:
+The given timeline is tentative and can be adapted before starting the master thesis.
 
-## *FissionLess*
+The following topics for master theses are available to start in the winter semester 2023/24:
 
-| Title | ***FissionLess*: FaaSify and fission monoliths as pipelines in federated FaaS** |
-| - | - | 
-| Description | Often, serverless functions are seen as a black-box atomic units that receive data input to compute something and return data output. Many existing works use fusion to merge computation within serverless workflows, thereby reducing invocation latency and ephemeral data transfer between workflow functions. In this thesis, we will dive into the function code and examine to what extent fission of user or serverless functions into multiple smaller chunk-functions would bring benefit in terms of cost and performance. We will also investigate to what extent splitting monoliths can be automatized in order to FaaSify them. Finally, this thesis will explore existing scheduling approaches and their applicability in decision making where each chunk-function should be deployed. |
-|Tasks| 1. Develop function-fission and FaaSifier. <br> 2. Develop a profiler for chunk-function execution on various providers. <br> 3. Integrate automatic deployer for various FaaS providers (e.g. TerraForm, Serverless Framework, GoDeploy, TestOps).<br> 4. Develop an optimization algorithm that creates a Pareto-optimal chunk functions <br>5. Evaluate FissionLess with some real life examples.|
-| Theoretical skills | Cloud Computing, Serverless. | 
-| Practical skills | Programming languages, Cloud APIs, git.|
-| Related work | 1. (`Automatic function packaging and deployment`) R. Cordingly, H. Yu, V. Hoang, Z. Sadeghi, D. Foster, D. Perez, R. Hatchett, and W. Lloyd. "The Serverless Application Analytics Framework: Enabling Design Trade-off Evaluation for Serverless Software." In 2020 21st ACM/IFIP International Middleware Conference: 6th International Workshop on Serverless Computing (WoSC'20). 2020, [SAAF](https://github.com/wlloyduw/SAAF). This tools can be used for wrappers and deployment scripts for various programming languages and FaaS providers. <br> 2. (`Node.js FaaSifier`) S. Ristov, S. Pedratscher, J. Wallnöfer, and T. Fahringer, “DAF: Dependency-Aware FaaSifier for Node.js Monolithic Applications,” in IEEE Software, doi: 10.1109/MS.2020.3018334, [DAF](https://github.com/qngapparat/daf).<br> 3. (`Automatic function deployment`) [Terraform](https://www.terraform.io/).<br> 4. (`Automatic function deployment`) [Serverless](https://www.serverless.com/).<br>  5. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as GoDeploy and TestOps for automatic deployment and benchmarking.|
----
 
-## *HolisticFaaS*
 
-| Title | ***HolisticFaaS*: A web-based platform for management of serverless applications in Federated FaaS** |
+## *AFCL-Throughput*
+
+| Title | ***AFCL-Througput*: Optimize AFCL serverless workflows with limited throughput in federated FaaS** |
 | ----- | ----- | 
-| Description |  Each FaaS provider offer management console where their customers can view and manage serverless functions. Unfortunately, users need to use multiple management consoles when their serverless applications are deployed across different FaaS provider, e.g., due to better performance, lower cost, increased resilience, better service offer, etc. In this master thesis, the student will develop a web-based platform for holistic view of all user serverless applications across different providers. Moreover, the platform will offer migration / replication of applications from one to another user, from one to another cloud region, one to another providers, etc. The system has a holistic view of all source codes (e.g., github), deployment packages, inputs to the applications (e.g., input.json), yaml file of the applications (e.g., AFCL yaml file), etc. <br> *Use case 1*: students do some project and have functions on their own accounts / providers / cloud regions. The lecturer has a hard time to replicate the environment. <br> *Use case 2* The research team comprises multiple users, each with different accounts and need to share / run / replicate serverless applications in federated FaaS.|
-|Tasks| 1. Develop a module for migration / replication per user / region / workflow application / function / provider. <br> 2. Develop web-based application for user and serverless application management. <br> 3. Integrate automatic deployer for various FaaS providers (e.g. TerraForm, Serverless Framework, GoDeploy, TestOps).<br> 4. Evaluate migration / replication of serverless applications.|
+| Description | Many scheduling techniques exist that optimize workflow applications in federated clouds. They map workflow tasks to the existin set of resources based on some heuristics or genetic algortihms. In either case, they use the constraint of maximum allowed concurrent tasks based on the amount of resources, assuming that the number of tasks is much larger than the number of available resources. For instance, in our papers xAFCL and FaaSt, we used earliest finish time list-based schedulers to map functions of the workflow across multiple regions of federated FaaS. We considered the concurrency limit of cloud providers up to 1,000 concurrent functions. However, cloud providers have another constraint in terms of throughput, that is, the amount of invocations within a given time frame. Unfortunately, this parameter is often ignored by existing serverless and other workflow management systems. To bridge this gap, in this master thesis, the student will extend the existing xAFCL system with a scheduler that monitors the number of invocations and optimize the workflow execution in federated FaaS. 
+|Tasks| 1. Develop the scheduler *AFCL-Througput*. <br> 2. Develop a monitoring module in the xAFCL serverless workflow management system. <br> 3. Adapt AFCL with throughput constraint, apart from concurrency.<br> 4. Develop a mathematical model for *AFCL-Througput* and validate it. <br> 5. Evaluate the *AFCL-Througput* scheduler with state-of-the-art schedulers and real-life workflows.|
 | Theoretical skills | Cloud Computing, Serverless. | 
-| Practical skills | Programming languages, Cloud APIs, git.|
-| Related work | 1. (`Automatic function packaging and deployment`) R. Cordingly, H. Yu, V. Hoang, Z. Sadeghi, D. Foster, D. Perez, R. Hatchett, and W. Lloyd. "The Serverless Application Analytics Framework: Enabling Design Trade-off Evaluation for Serverless Software." In 2020 21st ACM/IFIP International Middleware Conference: 6th International Workshop on Serverless Computing (WoSC'20). 2020, [SAAF](https://github.com/wlloyduw/SAAF). This tools can be used for wrappers and deployment scripts for various programming languages and FaaS providers. <br> 2. (`Node.js FaaSifier`) S. Ristov, S. Pedratscher, J. Wallnöfer, and T. Fahringer, “DAF: Dependency-Aware FaaSifier for Node.js Monolithic Applications,” in IEEE Software, doi: 10.1109/MS.2020.3018334, [DAF](https://github.com/qngapparat/daf).<br> 3. (`Automatic function deployment`) [Terraform](https://www.terraform.io/).<br> 4. (`Automatic function deployment`) [Serverless](https://www.serverless.com/).<br>  5. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as GoDeploy and TestOps for automatic deployment and benchmarking.|
+| Practical skills | Programming languages, Cloud APIs.|
+| Related work | 1. *xAFCL* enactment engine [*xAFCL*](https://doi.org/10.1109/TSC.2021.3128137).<br> 2. Abstract Function Choreography Language [AFCL](https://doi.org/10.1016/j.future.2020.08.012). <br> 3. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as GoDeploy and TestOps for automatic deployment and benchmarking. <br> 4. Various AFCLWorkflows on our github organization [*AFCLWorkflows*](https://github.com/AFCLWorkflows), such as Montage, BWA, 1000Genome, etc, which run on AWS and GCP with dynamic selection of function location and storage during runtime. <br> 5. Various AFCLWorkflows on our github organization [*AFCLWorkflows*](https://github.com/AFCLWorkflows), such as Montage, BWA, 1000Genome, etc, which run on AWS and GCP with dynamic selection of function location and storage during runtime.||
 ---
+
+
 
 ## *AFCL2`ABOL`*
 
@@ -155,7 +150,14 @@ The following topics for master theses are available to start in the winter seme
 
 ## *xAFCLBaaSSim*
 
-Simulation Framework for AFCL Serverless Workflows with functions that use Backend-as-a-Service functions. (More details will follow very soon) 
+| Title | ***xAFCLBaaSSim*: Simulation Framework for BaaS-enabled AFCL Serverless Workflows** |
+| ----- | ----- | 
+| Description | The initial version of the [*SimLess*](https://doi.org/10.1145/3542929.3563478) simulation framework, which is included in the xAFCL serverless workflow managent system, introduced a mathematical model to simulate `twins` (functions in other regions with the same memory) and `siblings` (functions in the same region with different memory) of a function. In the meantime, we extended SimLess with a mathematical model to simulate `cousins` (twins or siblings that access storage in other cloud regions than the original function). This master thesis will extend SimLess even further, to simulate BaaS-enabled serverless workflows, which run functions, BaaS services, and input/output data on any location in the federated FaaS. For instance, a function runs on AWS Frankfurt, which runs a BaaS service GCP Vision in Frankfurt, with input data is stored in AWS London, and the output data should be stored in GCP North Virginia.  
+|Tasks| 1. Develop a mathematical model for BaaS services in general <br> 2. Validate the mathematical model in federated FaaS. <br> 3. Evaluate *xAFCLBaaSSim* with real life workflows. <br> 4. Run sensitivity analysis to determine the accuracy / cost trade-off for simulation setup. |
+| Theoretical skills | Cloud Computing, Serverless. | 
+| Practical skills | Programming languages, Cloud APIs.|
+| Related work | 1. [*xAFCL*](https://doi.org/10.1109/TSC.2021.3128137) enactment engine with integrated simulator  [*SimLess*](https://doi.org/10.1145/3542929.3563478) .<br> 2. Abstract Function Choreography Language [AFCL](https://doi.org/10.1016/j.future.2020.08.012). <br> 3. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as GoDeploy and TestOps for automatic deployment and benchmarking. <br> 4. Various BaaS-enabled AFCLWorkflows on our github organization [*AFCLWorkflows*](https://github.com/AFCLWorkflows), such as pdf2Speech and speechTranslate, which run on AWS and GCP with dynamic selection of function location, BaaS service Speech2Text and Text2Speech, and storage during runtime. <br> 5. Various AFCLWorkflows on our github organization [*AFCLWorkflows*](https://github.com/AFCLWorkflows), such as Montage, BWA, 1000Genome, etc, which run on AWS and GCP with dynamic selection of function location and storage during runtime.|
+---
 
 
 ## *OptimizeFedFaaS*
@@ -168,6 +170,9 @@ Model and optimize specific aspects of Serverless Workflows (More details will f
 1. *ProfileBaaS*: Characterizing and profiling Backend-as-a-Service in Federated FaaS.
 
 
+<!--
+## *fServiceX*
+
 ## *fOps*
 
 | Title | ***fOps*: A pipeline for one-touch development, deployment, and testing of serverless functions across multiple providers** |
@@ -178,9 +183,6 @@ Model and optimize specific aspects of Serverless Workflows (More details will f
 | Practical skills | Programming languages, Cloud APIs, git.|
 | Related work | 1. (`Automatic function packaging and deployment`) R. Cordingly, H. Yu, V. Hoang, Z. Sadeghi, D. Foster, D. Perez, R. Hatchett, and W. Lloyd. "The Serverless Application Analytics Framework: Enabling Design Trade-off Evaluation for Serverless Software." In 2020 21st ACM/IFIP International Middleware Conference: 6th International Workshop on Serverless Computing (WoSC'20). 2020, [SAAF](https://github.com/wlloyduw/SAAF). This tools can be used for wrappers and deployment scripts for various programming languages and FaaS providers. <br> 2. (`Node.js FaaSifier`) S. Ristov, S. Pedratscher, J. Wallnöfer, and T. Fahringer, “DAF: Dependency-Aware FaaSifier for Node.js Monolithic Applications,” in IEEE Software, doi: 10.1109/MS.2020.3018334, [DAF](https://github.com/qngapparat/daf).<br> 3. (`Automatic function deployment`) [Terraform](https://www.terraform.io/).<br> 4. (`Automatic function deployment`) [Serverless](https://www.serverless.com/).<br>  5. (`Node2FaaS Framework`) [Node2FaaS *FCifier*](https://github.com/node2faas/framework).|
 ---
-
-
-## *fServiceX*
 
 | Title | ***fServiceX*: Agile development of serverless applications with abstract cloud services** |
 | - | - | 
@@ -200,16 +202,43 @@ Model and optimize specific aspects of Serverless Workflows (More details will f
 | Practical skills | Algorithms, Cloud APIs.|
 | Related work | 1. [Google SRE](https://sre.google/)
 
-
+-->
 
 # Active master theses
+
+
+## *HolisticFaaS*
+
+| Title | ***HolisticFaaS*: A web-based platform for management of serverless applications in Federated FaaS** |
+| ----- | ----- | 
+| Student | Stefan Achmüller | 
+| Status | Requirements analysis | 
+| Description |  Each FaaS provider offers a management console where their customers can view and manage serverless functions. Unfortunately, users need to use multiple management consoles when their serverless applications are deployed across different FaaS providers, e.g., due to better performance, lower cost, increased resilience, better service offer, etc. In this master thesis, the student will develop a web-based platform for holistic view of all user serverless applications across different providers. Moreover, the platform will offer migration / replication of applications from one to another user, from one to another cloud region, one to another provider, etc. The system has a holistic view of all source codes (e.g., github), deployment packages, inputs to the applications (e.g., input.json), yaml file of the applications (e.g., AFCL yaml file), etc. <br> *Use case 1*: students do some project and have functions on their own accounts / providers / cloud regions. The lecturer has a hard time to replicate the environment. <br> *Use case 2* The research team comprises multiple users, each with different accounts and need to share / run / replicate serverless applications in federated FaaS.|
+|Tasks| 1. Develop a module for migration / replication per user / region / workflow application / function / provider. <br> 2. Develop web-based application for user and serverless application management. <br> 3. Integrate automatic deployer for various FaaS providers (e.g. TerraForm, Serverless Framework, GoDeploy, TestOps).<br> 4. Evaluate migration / replication of serverless applications.|
+| Theoretical skills | Cloud Computing, Serverless. | 
+| Practical skills | Programming languages, Cloud APIs, git.|
+| Related work | 1. (`Automatic function packaging and deployment`) R. Cordingly, H. Yu, V. Hoang, Z. Sadeghi, D. Foster, D. Perez, R. Hatchett, and W. Lloyd. "The Serverless Application Analytics Framework: Enabling Design Trade-off Evaluation for Serverless Software." In 2020 21st ACM/IFIP International Middleware Conference: 6th International Workshop on Serverless Computing (WoSC'20). 2020, [SAAF](https://github.com/wlloyduw/SAAF). This tools can be used for wrappers and deployment scripts for various programming languages and FaaS providers. <br> 2. (`Node.js FaaSifier`) S. Ristov, S. Pedratscher, J. Wallnöfer, and T. Fahringer, “DAF: Dependency-Aware FaaSifier for Node.js Monolithic Applications,” in IEEE Software, doi: 10.1109/MS.2020.3018334, [DAF](https://github.com/qngapparat/daf).<br> 3. (`Automatic function deployment`) [Terraform](https://www.terraform.io/).<br> 4. (`Automatic function deployment`) [Serverless](https://www.serverless.com/).<br>  5. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as GoDeploy and TestOps for automatic deployment and benchmarking.|
+---
+
+## *FissionLess*
+
+| Title | ***FissionLess*: FaaSify and fission monoliths as pipelines in federated FaaS** |
+| ----- | ----- | 
+| Student |  Simon Triendl| 
+| Status | Development | 
+| Description | Often, serverless functions are seen as a black-box atomic units that receive data input to compute something and return data output. Many existing works use fusion to merge computation within serverless workflows, thereby reducing invocation latency and ephemeral data transfer between workflow functions. In this thesis, we will dive into the function code and examine to what extent fission of user or serverless functions into multiple smaller chunk-functions would bring benefit in terms of cost and performance. We will also investigate to what extent splitting monoliths can be automatized in order to FaaSify them. Finally, this thesis will explore existing scheduling approaches and their applicability in decision making where each chunk-function should be deployed. |
+|Tasks| 1. Develop function-fission and FaaSifier. <br> 2. Develop a profiler for chunk-function execution on various providers. <br> 3. Integrate automatic deployer for various FaaS providers (e.g. TerraForm, Serverless Framework, GoDeploy, TestOps).<br> 4. Develop an optimization algorithm that creates a Pareto-optimal chunk functions <br>5. Evaluate FissionLess with some real life examples.|
+| Theoretical skills | Cloud Computing, Serverless. | 
+| Practical skills | Programming languages, Cloud APIs, git.|
+| Related work | 1. (`Automatic function packaging and deployment`) R. Cordingly, H. Yu, V. Hoang, Z. Sadeghi, D. Foster, D. Perez, R. Hatchett, and W. Lloyd. "The Serverless Application Analytics Framework: Enabling Design Trade-off Evaluation for Serverless Software." In 2020 21st ACM/IFIP International Middleware Conference: 6th International Workshop on Serverless Computing (WoSC'20). 2020, [SAAF](https://github.com/wlloyduw/SAAF). This tools can be used for wrappers and deployment scripts for various programming languages and FaaS providers. <br> 2. (`Node.js FaaSifier`) S. Ristov, S. Pedratscher, J. Wallnöfer, and T. Fahringer, “DAF: Dependency-Aware FaaSifier for Node.js Monolithic Applications,” in IEEE Software, doi: 10.1109/MS.2020.3018334, [DAF](https://github.com/qngapparat/daf).<br> 3. (`Automatic function deployment`) [Terraform](https://www.terraform.io/).<br> 4. (`Automatic function deployment`) [Serverless](https://www.serverless.com/).<br>  5. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as GoDeploy and TestOps for automatic deployment and benchmarking.|
+---
 
 ## *xAFCL2* (xAFCLStream)
 
 | Title | ***xAFCL2*: A microservices-based serverless workflow management system in Federated FaaS** |
 | ----- | ----- | 
 | Student | Thomas Oberroither | 
-| Status | Requirement analysis | 
+| Status | Requirements analysis | 
 | Description |  The existing xAFCL serverless workflow management system will be migrated on a new platform based on microservices, including <br> - *workflow parser(s)* microservice(s), (AFCL or Step Functions.) <br> - *static scheduler(s)* service(s) (e.g., random, FaaSt, etc.); <br> - *invoker service* to run functions across multiple providers; <br> - *deployer service* to deploy functions across multiple providers; <br> - *resilience service* (e.g., for fault tolerance); <br> - *monitoring service* (status of each function), <br> - *dynamic scheduler* before execution, still check the status of cloud regions, etc. <br> The system should support both synchronous and asynchronous serverless workflows, as well as multiple serverless workflows simulatenaously.   
 |Tasks| 1. Develop the core microservices (parser, invoker, monitor, resilience). <br> 2. Develop at least one scheduler microservice. <br> 3. Integrate automatic deployer for various FaaS providers (e.g. TerraForm, Serverless Framework, GoDeploy, TestOps).<br> 4. Evaluate latencies of the system. <br> 5. Evaluate the system with state-of-the-art.|
 | Theoretical skills | Cloud Computing, Serverless. | 
@@ -217,15 +246,6 @@ Model and optimize specific aspects of Serverless Workflows (More details will f
 | Related work | 1. Ideally the student attended the course "Serverless Cloud Automation Application" SS23. <br> 2. Books regarding microservice patterns.<br> 3. *xAFCL* enactment engine with integrated simulator SimLess [*xAFCL EE*](https://doi.org/10.1109/TSC.2021.3128137).<br> 4. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as GoDeploy and TestOps for automatic deployment and benchmarking.|
 ---
 
-
-##  *MLProfileLess*
-
-| Title | **ML-based profiling of serverless functions with federated storage** |
-| - | - | 
-| Student | Philipp Gritsch | 
-| Status | Defensio | 
-| Description | Scientific workloads, which are represented as serverless workflows, benefit from federated clouds in terms of performance. However, such heterogeneous environments burden the decision of the optimal configuration. The existing simulators mostly utilize either mathematical models or machine-learning based methods to predict costs or runtime of serverless functions., Unfortunately, in general, they use federation of serverless functions across multiple regions of various cloud providers, but consider a single storage, which often generates huge latency for ephemeral data transfer between functions. In order to bridge this gap, this master thesis evaluates to what extent existing machine learning methodologies can be used to profile scientific workflows and determines the optimal storage setup for different intermediate data characteristics in federated storage. The outcome is a model, which estimates the round trip time of serverless functions on different providers, regions and storages. The model showed up to 90 % accuracy for running a workflow on "unseen" resources (both for functions and storage regions), which is similar as the state-of-the-art simulators, while reducing the cost for configuration setup by 26 %.||
----
 
 ##  *MOStoreLess*
 
@@ -241,7 +261,7 @@ Model and optimize specific aspects of Serverless Workflows (More details will f
 | Title | ***CORE*: Code Once, Run Everywhere. Engineering serverless workflow applications with high-level of abstraction** |
 | - | - | 
 | Student | Thomas Larcher | 
-| Status | Finilizing master thesis | 
+| Status | Defensio | 
 | Description | All cloud providers offer SDKs to easily code applications with their services. While on the one hand, these SDKs simplify developers' effort, they lock users to use other cloud services from the same cloud provider. Such codes (e.g., serverless functions), are neither *portable* (to migrate them on another cloud provider), nor *interoperable* (switch cloud service from another cloud provider). This vendor lock-in prevents users to switch the same service from other providers or to mix services from arbitrary providers. For instance, one cloud provider may reduce storage price, while another cloud provider may introduce more accurate OCR service for preferred language. To bridge this gap, this master thesis introduces CORE (Core Once Run Everywhere), an abstraction library that allows developers to code portable functions that can use interoperable cloud services within AFCL serverless workflows (text2speech and OCR). Moreover, heuristics will be researched to select the appropriate service based on user objectives.||
 ---
 
@@ -259,6 +279,7 @@ Model and optimize specific aspects of Serverless Workflows (More details will f
 
 # Closed master theses
 
+1. "ML-based profiling of serverless functions with federated storage", Philipp Gritsch, SS2023 [details](./closed/MLProfileLess.md)
 1. "*CrossFlow*: Cross-layered resource management in Cloud continuum", Ahmet Aspir, WS2022 [details](./closed/CrossFlow.md)
 1. "*AFCL-Sched*: Optimal execution of FCs across multiple FaaS systems", Christian Hollaus, SS2022 [details](./closed/AFCL-Sched.md).
 1. "AFCL Environment - Development and Scalable Execution of Portable Function Choreographies Across Multiple Serverless Cloud Platforms", Stefan Pedratscher, SS2021 [details](./closed/AFCLEnvironment.md).
@@ -276,7 +297,7 @@ Details for closed master theses can be found [here](./closed/README.md).
 # Milestones for a successful master thesis
 
 - Requirements analysis
-- Review the related work
+- Review the related work and detect their weaknesses
 - System architecture
 - Development
 - Evaluation
@@ -287,6 +308,6 @@ Details for closed master theses can be found [here](./closed/README.md).
 
 # Contact
 
-If you need any additional information, please do not hesitate to contact me. 
+If you need any additional information, or have your own idea from the aforementioned research tracks, please do not hesitate to contact me. 
 
 My topics for bachelor theses may be found [here](https://github.com/sashkoristov/bachelor-theses), which could also be adapted as master theses.
