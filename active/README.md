@@ -2,7 +2,7 @@
 
 ## Started in SS2024
 
-
+1. ***ServerlessIntent*: A novel programming model to code portable serverless applications with interoperable cloud services in federated clouds**, Florian Unterhofer. [details](./ServerlessIntent.md).
 
 ##  Started in WS2023
 

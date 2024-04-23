@@ -111,23 +111,6 @@ The given timeline is tentative and can be adapted before starting the master th
 The following topics for master theses are available to start in the winter semester 2023/24:
 
 
-## *ServerlessIntent*
-
-| Title | ***ServerlessIntent*: A novel programming model to code portable serverless applications with interoperable cloud services in federated clouds** |
-| ----- | ----- | 
-| Description | Developers increasingly deploy Backend-as-a-Service (BaaS)-enabled serverless functions across various cloud providers to exploit the variety of BaaS offerings to reduce costs or enhance performance. However, the dependence on specific provider features and configurations still leads to challenges in terms of portability, underlying platform heterogeneity, and vendor lock-in. Developers still largely face a choice to either use BaaS services from a single provider or code many versions of their serverless functions to support multiple cloud providers. This master thesis would investigate the potential for a novel programming model for serverless applications that allows developers to code portable functions with interoperable BaaS services in a uniform manner, based on a novel approach with *serverless intents*. Serverless intent abstracts heterogeneous BaaS services, including their provider, region, features scope, and input and output data access types. The developer specifies `WHAT` is the *intent* (e.g. *SpeechRecognition*), `WHICH` *features* of the intent (e.g., *srtSubtitles*) including their *values* (e.g., *true* or *false*) will be applied, to `WHOM` *input* should the intent and features be applied, and `WHERE` the output should be stored. One serverless intent may represents a single BaaS service that should be executed on multiple providers to achieve a union of features of all providers or a composition of multiple BaaS services to create complex composite BaaS services. For example, no single BaaS service exist for the following *intent*: Blind people in Germany to read pdf files written in English. The programming model should automatically implement this intent with a composition of three BaaS services *OCR* → *translate* → *T2S*. Additionally, the programming model should automatically generate a serverless workflow to implement the required intent, including helper built-in intents to split, merge, and distribute the inputs to intents to overcome limitations and constraints of a each cloud provider. 
-|Tasks| 1. Develop a data model (features, values, providers, BaaS, constraints, range, etc.) for serverless intents, which includes BaaS services and storage access of at least two cloud providers. <br> 2. Develop an intelligent system that will find a sequence of simple intents (BaaS services) to create the required intent <br> 3. Develop an API to automatically create a serverless workflow. <br> 4. Evaluate the system. 5. Evaluate the system with state-of-the-art.|
-| Theoretical skills | Cloud Computing, Serverless. | 
-| Practical skills | Programming languages, Cloud APIs.|
-| Related work | 1. *xAFCL* enactment engine with integrated simulator SimLess [*xAFCL EE*](https://doi.org/10.1109/TSC.2021.3128137).<br> 2. Abstract Function Choreography Language [AFCL](https://doi.org/10.1016/j.future.2020.08.012). <br> 3. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as CORE for interoperable BaaS services.|
-
-### Architecture of serverless intents
-
-| <img src="figures/intent.pdf" /> | <img src="figures/ServerlessIntent.pdf" /> |
-
-
----
-
 
 ## *AFCL-Throughput*
 
@@ -223,6 +206,18 @@ Model and optimize specific aspects of Serverless Workflows (More details will f
 
 # Active master theses
 
+## *ServerlessIntent*
+
+| Title | ***ServerlessIntent*: A novel programming model to code portable serverless applications with interoperable cloud services in federated clouds** |
+| ----- | ----- | 
+| Student | Florian Unterhofer | 
+| Description | Developers increasingly deploy Backend-as-a-Service (BaaS)-enabled serverless functions across various cloud providers to exploit the variety of BaaS offerings to reduce costs or enhance performance. However, the dependence on specific provider features and configurations still leads to challenges in terms of portability, underlying platform heterogeneity, and vendor lock-in. Developers still largely face a choice to either use BaaS services from a single provider or code many versions of their serverless functions to support multiple cloud providers. This master thesis would investigate the potential for a novel programming model for serverless applications that allows developers to code portable functions with interoperable BaaS services in a uniform manner, based on a novel approach with *serverless intents*. Serverless intent abstracts heterogeneous BaaS services, including their provider, region, features scope, and input and output data access types. The developer specifies `WHAT` is the *intent* (e.g. *SpeechRecognition*), `WHICH` *features* of the intent (e.g., *srtSubtitles*) including their *values* (e.g., *true* or *false*) will be applied, to `WHOM` *input* should the intent and features be applied, and `WHERE` the output should be stored. One serverless intent may represents a single BaaS service that should be executed on multiple providers to achieve a union of features of all providers or a composition of multiple BaaS services to create complex composite BaaS services. For example, no single BaaS service exist for the following *intent*: Blind people in Germany to read pdf files written in English. The programming model should automatically implement this intent with a composition of three BaaS services *OCR* → *translate* → *T2S*. Additionally, the programming model should automatically generate a serverless workflow to implement the required intent, including helper built-in intents to split, merge, and distribute the inputs to intents to overcome limitations and constraints of a each cloud provider. 
+|Tasks| 1. Develop a data model (features, values, providers, BaaS, constraints, range, etc.) for serverless intents, which includes BaaS services and storage access of at least two cloud providers. <br> 2. Develop an intelligent system that will find a sequence of simple intents (BaaS services) to create the required intent <br> 3. Develop an API to automatically create a serverless workflow. <br> 4. Evaluate the system. 5. Evaluate the system with state-of-the-art.|
+| Theoretical skills | Cloud Computing, Serverless. | 
+| Practical skills | Programming languages, Cloud APIs.|
+| Related work | 1. *xAFCL* enactment engine with integrated simulator SimLess [*xAFCL EE*](https://doi.org/10.1109/TSC.2021.3128137).<br> 2. Abstract Function Choreography Language [AFCL](https://doi.org/10.1016/j.future.2020.08.012). <br> 3. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as CORE for interoperable BaaS services.|
+
+---
 
 ## *HolisticFaaS*
 
