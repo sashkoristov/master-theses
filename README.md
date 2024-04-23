@@ -273,29 +273,12 @@ Model and optimize specific aspects of Serverless Workflows (More details will f
 | Description | The aim of this master thesis is create a multi-objective data-aware scheduler that aims to minimize the overall makespan and cost of an AFCL serverless workflow in federated FaaS using federated storage. *MOStoreLess* analyzes ephemeral data transfers between functions of the workflow and considers network locality, both for cost and round trip times. ||
 ---
 
-##  *CORE*
-
-| Title | ***CORE*: Code Once, Run Everywhere. Engineering serverless workflow applications with high-level of abstraction** |
-| - | - | 
-| Student | Thomas Larcher | 
-| Status | Defensio | 
-| Description | All cloud providers offer SDKs to easily code applications with their services. While on the one hand, these SDKs simplify developers' effort, they lock users to use other cloud services from the same cloud provider. Such codes (e.g., serverless functions), are neither *portable* (to migrate them on another cloud provider), nor *interoperable* (switch cloud service from another cloud provider). This vendor lock-in prevents users to switch the same service from other providers or to mix services from arbitrary providers. For instance, one cloud provider may reduce storage price, while another cloud provider may introduce more accurate OCR service for preferred language. To bridge this gap, this master thesis introduces CORE (Core Once Run Everywhere), an abstraction library that allows developers to code portable functions that can use interoperable cloud services within AFCL serverless workflows (text2speech and OCR). Moreover, heuristics will be researched to select the appropriate service based on user objectives.||
----
-
-
-##  *AccessLess*
-
-| Title | ***AccessLess*: Data-aware scheduler in federated FaaS** |
-| - | - | 
-| Student | Mika Hautz | 
-| Status | Evaluation | 
-| Description | The aim of this master thesis is create a data-aware scheduler that aims to minimize the overall makespan of an AFCL serverless workflow in federated FaaS. *AccessLess* analyzes ephemeral data transfers between functions of the AFCL workflow and considers network locality. Unlike the related work, which schedules functions only, *AccessLess* schedules where ephemeral data should be stored in federated FaaS.||
----
-
 
 
 # Closed master theses
 
+1. ***CORE*: Code Once, Run Everywhere. Engineering Serverless Workflow Applications with High-Level of Abstraction**, Thomas Larcher. [details](./CORE.md).
+1. ***AccessLess*: Data-aware scheduler in Federated FaaS**, Mika Hautz. [details](./AccessLess.md).
 1. "ML-based profiling of serverless functions with federated storage", Philipp Gritsch, SS2023 [details](./closed/MLProfileLess.md)
 1. "*CrossFlow*: Cross-layered resource management in Cloud continuum", Ahmet Aspir, WS2022 [details](./closed/CrossFlow.md)
 1. "*AFCL-Sched*: Optimal execution of FCs across multiple FaaS systems", Christian Hollaus, SS2022 [details](./closed/AFCL-Sched.md).
