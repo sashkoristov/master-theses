@@ -232,18 +232,6 @@ Model and optimize specific aspects of Serverless Workflows (More details will f
 | Related work | 1. (`Automatic function packaging and deployment`) R. Cordingly, H. Yu, V. Hoang, Z. Sadeghi, D. Foster, D. Perez, R. Hatchett, and W. Lloyd. "The Serverless Application Analytics Framework: Enabling Design Trade-off Evaluation for Serverless Software." In 2020 21st ACM/IFIP International Middleware Conference: 6th International Workshop on Serverless Computing (WoSC'20). 2020, [SAAF](https://github.com/wlloyduw/SAAF). This tools can be used for wrappers and deployment scripts for various programming languages and FaaS providers. <br> 2. (`Node.js FaaSifier`) S. Ristov, S. Pedratscher, J. Wallnöfer, and T. Fahringer, “DAF: Dependency-Aware FaaSifier for Node.js Monolithic Applications,” in IEEE Software, doi: 10.1109/MS.2020.3018334, [DAF](https://github.com/qngapparat/daf).<br> 3. (`Automatic function deployment`) [Terraform](https://www.terraform.io/).<br> 4. (`Automatic function deployment`) [Serverless](https://www.serverless.com/).<br>  5. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as GoDeploy and TestOps for automatic deployment and benchmarking.|
 ---
 
-## *FissionLess*
-
-| Title | ***FissionLess*: FaaSify and fission monoliths as pipelines in federated FaaS** |
-| ----- | ----- | 
-| Student |  Simon Triendl| 
-| Status | Development | 
-| Description | Often, serverless functions are seen as a black-box atomic units that receive data input to compute something and return data output. Many existing works use fusion to merge computation within serverless workflows, thereby reducing invocation latency and ephemeral data transfer between workflow functions. In this thesis, we will dive into the function code and examine to what extent fission of user or serverless functions into multiple smaller chunk-functions would bring benefit in terms of cost and performance. We will also investigate to what extent splitting monoliths can be automatized in order to FaaSify them. Finally, this thesis will explore existing scheduling approaches and their applicability in decision making where each chunk-function should be deployed. |
-|Tasks| 1. Develop function-fission and FaaSifier. <br> 2. Develop a profiler for chunk-function execution on various providers. <br> 3. Integrate automatic deployer for various FaaS providers (e.g. TerraForm, Serverless Framework, GoDeploy, TestOps).<br> 4. Develop an optimization algorithm that creates a Pareto-optimal chunk functions <br>5. Evaluate FissionLess with some real life examples.|
-| Theoretical skills | Cloud Computing, Serverless. | 
-| Practical skills | Programming languages, Cloud APIs, git.|
-| Related work | 1. (`Automatic function packaging and deployment`) R. Cordingly, H. Yu, V. Hoang, Z. Sadeghi, D. Foster, D. Perez, R. Hatchett, and W. Lloyd. "The Serverless Application Analytics Framework: Enabling Design Trade-off Evaluation for Serverless Software." In 2020 21st ACM/IFIP International Middleware Conference: 6th International Workshop on Serverless Computing (WoSC'20). 2020, [SAAF](https://github.com/wlloyduw/SAAF). This tools can be used for wrappers and deployment scripts for various programming languages and FaaS providers. <br> 2. (`Node.js FaaSifier`) S. Ristov, S. Pedratscher, J. Wallnöfer, and T. Fahringer, “DAF: Dependency-Aware FaaSifier for Node.js Monolithic Applications,” in IEEE Software, doi: 10.1109/MS.2020.3018334, [DAF](https://github.com/qngapparat/daf).<br> 3. (`Automatic function deployment`) [Terraform](https://www.terraform.io/).<br> 4. (`Automatic function deployment`) [Serverless](https://www.serverless.com/).<br>  5. Various FaaS tools on our github organization [*FaaS Tools*](https://github.com/FaaSTools), such as GoDeploy and TestOps for automatic deployment and benchmarking.|
----
 
 ## *xAFCL2* (xAFCLStream)
 
@@ -272,8 +260,9 @@ Model and optimize specific aspects of Serverless Workflows (More details will f
 
 # Closed master theses
 
-1. ***CORE*: Code Once, Run Everywhere. Engineering Serverless Workflow Applications with High-Level of Abstraction**, Thomas Larcher. [details](./CORE.md).
-1. ***AccessLess*: Data-aware scheduler in Federated FaaS**, Mika Hautz. [details](./AccessLess.md).
+1. ***FissionLess*: FaaSify and fission monoliths as pipelines in federated FaaS**, Simon Triendl. [details](./closed/FissionLess.md).
+1. ***CORE*: Code Once, Run Everywhere. Engineering Serverless Workflow Applications with High-Level of Abstraction**, Thomas Larcher. [details](./closed/CORE.md).
+1. ***AccessLess*: Data-aware scheduler in Federated FaaS**, Mika Hautz. [details](./closed/AccessLess.md).
 1. "ML-based profiling of serverless functions with federated storage", Philipp Gritsch, SS2023 [details](./closed/MLProfileLess.md)
 1. "*CrossFlow*: Cross-layered resource management in Cloud continuum", Ahmet Aspir, WS2022 [details](./closed/CrossFlow.md)
 1. "*AFCL-Sched*: Optimal execution of FCs across multiple FaaS systems", Christian Hollaus, SS2022 [details](./closed/AFCL-Sched.md).
