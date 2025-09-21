@@ -1,33 +1,32 @@
 # Master theses topics (Supervisor: `Ass. Prof. Sashko Ristov`)
 
-`New topics for winter semester 2025/2026.`
+`Master Theses - Winter Semester 2025/2026.`
 
-A repository for available, active and closed topics for master theses supervised by Ass. Prof. Sashko Ristov.
+This repository contains available, **active, and closed master thesis topics** supervised by **Ass. Prof. Sashko Ristov**.
 
+The topics are closely connected to my **current research areas** and ongoing **national and international research projects**. They span both **fundamental research** and **applied research** domains.
 Master theses topics are closely related with my current research areas:
 
-- Cloud Engineering (Fundamental research)
-    - Federation; 
-    - Abstraction; 
-    - Automation; 
-    - Serverless Computing; FaaSification; 
-    - Workflow Management Systems; 
-    - Performance; Simulation; Modeling; Optimisation, Scheduling.
-- System integration in Clean Energy Transition (Applied research)
-    - Digital twins and AI
-    - Electricity management
-    - Flexibility markets
-- Digital Twins
-    - Engineering Digital Twins
 
+## Research areas
 
+### Cloud Engineering (Fundamental Research)
+- Federation and interoperability
+- Abstraction and automation
+- Serverless computing and FaaSification
+- Workflow management systems
+- Performance, simulation, and modeling
+- Optimization and scheduling
 
+### System Integration in Clean Energy Transition (Applied Research)
+- Digital twins and AI-driven analytics
+- Electricity management and smart grids
+- Flexibility markets and demand response
 
-# Other Information
+### Digital Twins (Applied and Fundamental Research)
+- Engineering methods and lifecycle automation for digital twins
+- Integration of descriptive, predictive, and prescriptive models
 
-The following paragraphs present the available topics for master theses, as well as the active and closed master theses. 
-
-You can find a latex template for the master thesis which includes some hints [here](https://github.com/sashkoristov/master-theses/tree/main/template).
 
 
 # Available master theses
@@ -139,7 +138,6 @@ Details for closed master theses can be found [here](./closed/README.md).
 - Evaluation
 - Finalizing the master thesis
 - Defensio
-- `Farewell party` :blush:
 
 
 # Contact
@@ -147,3 +145,9 @@ Details for closed master theses can be found [here](./closed/README.md).
 If you need any additional information, or have your own idea from the aforementioned research tracks, please do not hesitate to contact me. 
 
 My topics for bachelor theses may be found [here](https://github.com/sashkoristov/bachelor-theses), which could also be adapted as master theses.
+
+
+# Other Information
+
+You can find a latex template for the master thesis which includes some hints [here](https://github.com/sashkoristov/master-theses/tree/main/template).
+
